@@ -1,0 +1,14 @@
+ffmpeg -i "double_lift_zebra.mp4" -c:v libx264 -pix_fmt yuv420p "double_lift_zebra_fixed.mp4"
+
+ffmpeg -i "double_lift_sloth.mp4" -c:v libx264 -pix_fmt yuv420p "double_lift_sloth_fixed.mp4"
+
+ffmpeg -i "single_lift_rope.mp4" -c:v libx264 -pix_fmt yuv420p "single_lift_rope_fixed.mp4"
+
+ffmpeg -i "single_push_rope.mp4" -c:v libx264 -pix_fmt yuv420p "single_push_rope_fixed.mp4"
+
+rope_unseen_compose
+ffmpeg -i "rope_unseen_compose.mp4" -c:v libx264 -pix_fmt yuv420p "rope_unseen_compose_fixed.mp4"
+
+ffmpeg -i "sloth_unseen_compose.mp4" -c:v libx264 -pix_fmt yuv420p "sloth_unseen_compose_fixed.mp4"
+
+<section class="section hero is-light">
