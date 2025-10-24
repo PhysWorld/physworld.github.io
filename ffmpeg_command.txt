@@ -12,3 +12,12 @@ ffmpeg -i "rope_unseen_compose.mp4" -c:v libx264 -pix_fmt yuv420p "rope_unseen_c
 ffmpeg -i "sloth_unseen_compose.mp4" -c:v libx264 -pix_fmt yuv420p "sloth_unseen_compose_fixed.mp4"
 
 <section class="section hero is-light">
+
+ffmpeg -i "double_lift_cloth_3_0.mp4" -c:v libx264 -pix_fmt yuv420p "double_lift_cloth_3_0_fixed.mp4"
+ffmpeg -i "double_stretch_zebra_0.mp4" -c:v libx264 -pix_fmt yuv420p "double_stretch_zebra_0_fixed.mp4"
+ffmpeg -i "single_clift_cloth_1_0.mp4" -c:v libx264 -pix_fmt yuv420p "single_clift_cloth_1_0_fixed.mp4"
+ffmpeg -i "single_clift_cloth_3_0.mp4" -c:v libx264 -pix_fmt yuv420p "single_clift_cloth_3_0_fixed.mp4"
+ffmpeg -i "single_lift_cloth_1_0.mp4" -c:v libx264 -pix_fmt yuv420p "single_lift_cloth_1_0_fixed.mp4"
+ffmpeg -i "single_lift_dinosor_0.mp4" -c:v libx264 -pix_fmt yuv420p "single_lift_dinosor_0_fixed.mp4"
+ffmpeg -i "single_lift_sloth_0.mp4" -c:v libx264 -pix_fmt yuv420p "single_lift_sloth_0_fixed.mp4"
+ffmpeg -i "single_push_rope_1_0.mp4" -c:v libx264 -pix_fmt yuv420p "single_push_rope_1_0_fixed.mp4"
