@@ -384,9 +384,13 @@ code {
 /* BibTeX Section Improvements */
 .bibtex-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 1rem;
+}
+
+#bibtex-code {
+  text-align: left; /* 确保 BibTeX 代码也左对齐 */
 }
 
 .copy-bibtex-btn {

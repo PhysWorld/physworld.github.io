@@ -43,8 +43,8 @@
   <title>PhysWorld</title>
   
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon_new.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon_new.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/globe.ico">
+  <link rel="apple-touch-icon" href="static/images/globe.ico">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -166,37 +166,58 @@
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?hl=zh-CN&user=WOBBM9IAAAAJ" target="_blank">Yu Yang</a>,</span>
+                <a href="https://scholar.google.com/citations?hl=zh-CN&user=WOBBM9IAAAAJ" target="_blank">Yu Yang<span style="font-size: 0.8em; vertical-align: top; position: relative; top: -5px; left: 5px;">1</a>,</span>
                 <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=8pIq2N0AAAAJ&hl=zh-CN&oi=ao" target="_blank">Zhilu Zhang</a>,</span>
+                  <a href="https://scholar.google.com/citations?user=8pIq2N0AAAAJ&hl=zh-CN&oi=ao" target="_blank">Zhilu Zhang<span style="font-size: 0.8em; vertical-align: top; position: relative; top: -5px; left: 5px;">1</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xiang Zhang</a>,</span>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xiang Zhang<span style="font-size: 0.8em; vertical-align: top; position: relative; top: -5px; left: 5px;">1</a>,</span>
                       <span class="author-block">
-                        <a href="https://scholar.google.com/citations?hl=zh-CN&user=YiDxCoAAAAAJ" target="_blank">Yihan Zeng</a>,</span>
+                        <a href="https://scholar.google.com/citations?hl=zh-CN&user=YiDxCoAAAAAJ" target="_blank">Yihan Zeng<span style="font-size: 0.8em; vertical-align: top; position: relative; top: -5px; left: 5px;">2</a>,</span>
                           <span class="author-block">
-                            <a href="https://scholar.google.com/citations?hl=zh-CN&user=QVtgiAEAAAAJ" target="_blank">Hui Li</a>,</span>
+                            <a href="https://scholar.google.com/citations?hl=zh-CN&user=QVtgiAEAAAAJ" target="_blank">Hui Li<span style="font-size: 0.8em; vertical-align: top; position: relative; top: -5px; left: 5px;">1</a>,</span>
                             <span class="author-block">
-                              <a href="https://scholar.google.com/citations?user=rUOpCEYAAAAJ&hl=zh-CN&oi=ao" target="_blank">Wangmeng Zuo</a>
+                              <a href="https://scholar.google.com/citations?user=rUOpCEYAAAAJ&hl=zh-CN&oi=ao" target="_blank">Wangmeng Zuo<span style="font-size: 0.8em; vertical-align: top; position: relative; top: -5px; left: 5px;">1</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Harbin Institute of Technology, Harbin, China</span>
+                    <span class="author-block">
+                      <span style="font-size: 0.8em; vertical-align: top; position: relative; top: -5px; left: -5px;">1 </span>
+                        Harbin Institute of Technology, Harbin, China</span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block">
+                      <span style="font-size: 0.8em; vertical-align: top; position: relative; top: -5px; left: -5px;">2 </span>
+                      Huawei Noah's Ark Lab</span>
                   </div>
 
                   <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
+
+                  <span class="link-block">
+                  <a href="https://arxiv.org/abs/2510.21447" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+                    
+                  
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/AlanYoung123/PhysWorld" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
                     </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                
 
                     
 
@@ -227,7 +248,7 @@ world model for real-time future state prediction.
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-           Interactive world models that simulate object dynamics are crucial for robotics, VR, and AR. However, it remains a significant challenge to learn physics-consistent dynamics models from limited real-world video data, especially for deformable objects with spatially-varying physical properties. To overcome the challenge of data scarcity, we propose PhysWorld, a novel framework that utilizes a simulator to synthesize physically plausible and diverse demonstrations to learn efficient world models. Specifically, we first construct a physics-consistent digital twin within MPM simulator via constitutive model selection and global-to-local optimization of physical properties. Subsequently, we apply part-aware perturbations to the physical properties and generate various motion patterns for the digital twin, synthesizing extensive and diverse demonstrations. Finally, using these demonstrations, we train a lightweight GNN-based world model that is embedded with physical properties. The real video can be used to further refine the physical properties. PhysWorld achieves accurate and fast future predictions for various deformable objects, and also generalizes well to novel interactions. Experiments show that PhysWorld has competitive performance while enabling inference speeds 47 times faster than the recent state-of-the-art method, \ie, PhysTwin. The code and pre-trained models will be publicly available.
+           Interactive world models that simulate object dynamics are crucial for robotics, VR, and AR. However, it remains a significant challenge to learn physics-consistent dynamics models from limited real-world video data, especially for deformable objects with spatially-varying physical properties. To overcome the challenge of data scarcity, we propose PhysWorld, a novel framework that utilizes a simulator to synthesize physically plausible and diverse demonstrations to learn efficient world models. Specifically, we first construct a physics-consistent digital twin within MPM simulator via constitutive model selection and global-to-local optimization of physical properties. Subsequently, we apply part-aware perturbations to the physical properties and generate various motion patterns for the digital twin, synthesizing extensive and diverse demonstrations. Finally, using these demonstrations, we train a lightweight GNN-based world model that is embedded with physical properties. The real video can be used to further refine the physical properties. PhysWorld achieves accurate and fast future predictions for various deformable objects, and also generalizes well to novel interactions. Experiments show that PhysWorld has competitive performance while enabling inference speeds 47 times faster than the recent state-of-the-art method, i.e., PhysTwin. The code and pre-trained models will be publicly available.
           </p>
         </div>
       </div>
@@ -281,21 +302,21 @@ world model for real-time future state prediction.
         </div>
         <div class="item item-video6">
           <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video4" controls muted loop height="100%" preload="metadata">
+          <video poster="" id="video6" controls muted loop height="100%" preload="metadata">
             <!-- Your video file here -->
             <source src="static/videos/PRED_video/single_lift_dinosor_0_fixed.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video7">
           <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video4" controls muted loop height="100%" preload="metadata">
+          <video poster="" id="video7" controls muted loop height="100%" preload="metadata">
             <!-- Your video file here -->
             <source src="static/videos/PRED_video/single_lift_sloth_0_fixed.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video8">
           <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video4" controls muted loop height="100%" preload="metadata">
+          <video poster="" id="video8" controls muted loop height="100%" preload="metadata">
             <!-- Your video file here -->
             <source src="static/videos/PRED_video/single_push_rope_1_0_fixed.mp4" type="video/mp4">
           </video>
@@ -419,12 +440,14 @@ fracture-like rope distortions and unnatural foot folding.
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@misc{yang2025physworldrealvideosworld,
+      title={PhysWorld: From Real Videos to World Models of Deformable Objects via Physics-Aware Demonstration Synthesis}, 
+      author={Yu Yang and Zhilu Zhang and Xiang Zhang and Yihan Zeng and Hui Li and Wangmeng Zuo},
+      year={2025},
+      eprint={2510.21447},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2510.21447}, 
 }</code></pre>
     </div>
 </section>
@@ -439,10 +462,7 @@ fracture-like rope distortions and unnatural foot folding.
 
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-
         </div>
       </div>
     </div>
