@@ -174,6 +174,8 @@
                       <span class="author-block">
                         <a href="https://scholar.google.com/citations?hl=zh-CN&user=YiDxCoAAAAAJ" target="_blank">Yihan Zeng<span style="font-size: 0.8em; vertical-align: top; position: relative; top: -5px; left: 5px;">2</a>,</span>
                           <span class="author-block">
+                            <a href="https://scholar.google.com/citations?hl=zh-CN&user=SluULSIAAAAJ" target="_blank">Xiaohe Wu<span style="font-size: 0.8em; vertical-align: top; position: relative; top: -5px; left: 5px;">1</a>,</span>
+                            <span class="author-block">
                             <a href="https://scholar.google.com/citations?hl=zh-CN&user=QVtgiAEAAAAJ" target="_blank">Hui Li<span style="font-size: 0.8em; vertical-align: top; position: relative; top: -5px; left: 5px;">1</a>,</span>
                             <span class="author-block">
                               <a href="https://scholar.google.com/citations?user=rUOpCEYAAAAJ&hl=zh-CN&oi=ao" target="_blank">Wangmeng Zuo<span style="font-size: 0.8em; vertical-align: top; position: relative; top: -5px; left: 5px;">1</a>
@@ -218,8 +220,12 @@
                   </a>
                 </span>
                 
-
-                    
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 <!-- Teaser video-->
@@ -227,12 +233,11 @@
   <div class="container is-max-widescreen">
     <div class="hero-body">
       <!-- TODO: Replace with your teaser video -->
-      <img src="static/figures/overview_jpg.jpg" alt="Research Teaser Image" style="width:100%; object-fit:contain;">
+      <img src="static/figures/overview.png" alt="Research Teaser Image" style="width:100%; object-fit:contain;">
       <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
-         Overview of PhysWorld. The framework first constructs a physics-consistent digital twin
-from videos, then uses it to generate diverse 4D demonstrations, and finally trains a GNN-based
-world model for real-time future state prediction.
+         Overview of PhysWorld. The framework first constructs a physics‐consistent digital twin from videos, then uses it to generate diverse 
+4D demonstrations, and finally trains a GNN‐based world model for real‐time future state prediction.
       </h2>
     </div>
   </div>
@@ -248,7 +253,16 @@ world model for real-time future state prediction.
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-           Interactive world models that simulate object dynamics are crucial for robotics, VR, and AR. However, it remains a significant challenge to learn physics-consistent dynamics models from limited real-world video data, especially for deformable objects with spatially-varying physical properties. To overcome the challenge of data scarcity, we propose PhysWorld, a novel framework that utilizes a simulator to synthesize physically plausible and diverse demonstrations to learn efficient world models. Specifically, we first construct a physics-consistent digital twin within MPM simulator via constitutive model selection and global-to-local optimization of physical properties. Subsequently, we apply part-aware perturbations to the physical properties and generate various motion patterns for the digital twin, synthesizing extensive and diverse demonstrations. Finally, using these demonstrations, we train a lightweight GNN-based world model that is embedded with physical properties. The real video can be used to further refine the physical properties. PhysWorld achieves accurate and fast future predictions for various deformable objects, and also generalizes well to novel interactions. Experiments show that PhysWorld has competitive performance while enabling inference speeds 47 times faster than the recent state-of-the-art method, i.e., PhysTwin. The code and pre-trained models will be publicly available.
+           Interactive world models that simulate object dynamics are crucial for robotics, VR, and AR. However, it remains a significant 
+challenge to learn physics‐consistent dynamics models from limited real‐world video data, especially for deformable objects with 
+spatially varying physical properties. To overcome the challenge of data scarcity, we propose PhysWorld, a novel framework 
+that leverages a simulator to synthesize diverse and physically plausible demonstrations for training efficient world models. 
+Specifically, we first construct a physics‐consistent digital twin within an MPM simulator via constitutive model selection and 
+global‐to‐local optimization of physical properties. Subsequently, we apply part‐aware perturbations to the physical properties 
+and generate various motion patterns for the digital twin, synthesizing extensive and diverse demonstrations. Finally, using 
+these demonstrations, we train a lightweight GNN‐based world model that is embedded with physical properties. The real‐world 
+data is further used to refine the physical properties. PhysWorld achieves accurate and fast future predictions for various 
+deformable objects, and also generalizes well to novel interactions. Experiments show that PhysWorld has competitive performance while enabling inference speeds 47 times faster than the recent state‐of‐the‐art method, that is, PhysTwin.
           </p>
         </div>
       </div>
@@ -258,177 +272,228 @@ world model for real-time future state prediction.
 <!-- End paper abstract -->
 
 
+    <!-- Video Comparison Slider -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Action-Conditioned Future Prediction</h2>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Action-Conditioned Future Prediction</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/PRED_video/double_lift_cloth_3_0_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/PRED_video/double_stretch_zebra_0_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/PRED_video/single_clift_cloth_1_0_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video4">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video4" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/PRED_video/single_clift_cloth_3_0_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video5">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video5" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/PRED_video/single_lift_cloth_1_0_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video6">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video6" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/PRED_video/single_lift_dinosor_0_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video7">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video7" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/PRED_video/single_lift_sloth_0_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video8">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video8" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/PRED_video/single_push_rope_1_0_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <h2 class="subtitle has-text-centered">
-        Visual results of action-conditioned future prediction.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
+          <!-- Scene selector -->
+          <div class="scene-selector" id="sceneSelector">
+            <button class="scene-btn active" data-scene="double_lift_cloth_3">double_lift_cloth_3</button>
+            <button class="scene-btn" data-scene="double_lift_sloth">double_lift_sloth</button>
+            <button class="scene-btn" data-scene="double_lift_zebra">double_lift_zebra</button>
+            <button class="scene-btn" data-scene="double_stretch_zebra">double_stretch_zebra</button>
+            <button class="scene-btn" data-scene="single_clift_cloth_3">single_clift_cloth_3</button>
+            <button class="scene-btn" data-scene="single_lift_cloth_1">single_lift_cloth_1</button>
+            <button class="scene-btn" data-scene="single_lift_dinosor">single_lift_dinosor</button>
+            <button class="scene-btn" data-scene="single_lift_rope">single_lift_rope</button>
+            <button class="scene-btn" data-scene="single_lift_sloth">single_lift_sloth</button>
+            <button class="scene-btn" data-scene="single_push_rope">single_push_rope</button>
+            <button class="scene-btn" data-scene="single_push_rope_1">single_push_rope_1</button>
+            <button class="scene-btn" data-scene="single_push_rope_4">single_push_rope_4</button>
+            <button class="scene-btn" data-scene="double_lift_cloth_1">double_lift_cloth_1</button>
+            <button class="scene-btn" data-scene="double_stretch_sloth">double_stretch_sloth</button>
+            <button class="scene-btn" data-scene="rope_double_hand">rope_double_hand</button>
+            <button class="scene-btn" data-scene="single_clift_cloth_1">single_clift_cloth_1</button>
+            <button class="scene-btn" data-scene="single_lift_cloth">single_lift_cloth</button>
+            <button class="scene-btn" data-scene="single_lift_cloth_3">single_lift_cloth_3</button>
+            <button class="scene-btn" data-scene="single_lift_cloth_4">single_lift_cloth_4</button>
+            <button class="scene-btn" data-scene="single_lift_zebra">single_lift_zebra</button>
+            <button class="scene-btn" data-scene="single_push_sloth">single_push_sloth</button>
+            <button class="scene-btn" data-scene="weird_package">weird_package</button>
+          </div>
 
+          <!-- Comparison container -->
+          <div class="video-compare-wrapper">
+            <div class="video-compare-container" id="videoCompare">
+              <!-- Bottom layer: with_points (right side) -->
+              <video class="compare-video compare-video-bg" id="videoRight"
+                     loop muted playsinline preload="auto"
+                     src="static/videos/pred_vis/with_points/double_lift_cloth_3.mp4"></video>
+              <!-- Top layer: without_points (left side, clipped) -->
+              <video class="compare-video compare-video-fg" id="videoLeft"
+                     loop muted playsinline preload="auto"
+                     src="static/videos/pred_vis/without_points/double_lift_cloth_3.mp4"></video>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Comparison with PhysTwin</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/future_prediction/double_lift_sloth_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/future_prediction/double_lift_zebra_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/future_prediction/single_lift_rope_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-          <div class="item item-video4">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video4" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/future_prediction/single_push_rope_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <h2 class="subtitle has-text-centered">
-        More visual results of action-conditioned future prediction compared with PhysTwin. Our method’s predicted positions
-show closer alignment with ground truth compared to PhysTwin. 
-      </h2>
-      <img src="static/figures/big_table.png" alt="Research Teaser Image" style="width:100%; max-height:500px; object-fit:contain;">
-      <h2 class="subtitle has-text-centered">
-        Quantitative results on action-conditioned future prediction and inference speed (FPS). Best
-metric values are bolded, while second-best ones are underlined. The metrics demonstrate both the accuracy
-and effectiveness of PhysWorld in both predicting motion and generating realistic images.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
+              <!-- Slider line -->
+              <div class="compare-slider-line" id="sliderLine"></div>
+              <!-- Slider handle -->
+              <div class="compare-slider-handle" id="sliderHandle">
+                <svg viewBox="0 0 40 40" width="40" height="40">
+                  <circle cx="20" cy="20" r="18" fill="rgba(255,255,255,0.85)" stroke="#555" stroke-width="1.5"/>
+                  <path d="M14 20l6-5v10z" fill="#555"/>
+                  <path d="M26 20l-6-5v10z" fill="#555"/>
+                </svg>
+              </div>
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Unseen Interaction</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/unseen_interaction/rope_unseen_compose_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/unseen_interaction/sloth_unseen_compose_fixed.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
+              <!-- Labels -->
+              <div class="compare-label compare-label-left">With Point Trajectories</div>
+              <div class="compare-label compare-label-right">Without Point Trajectories</div>
+            </div>
+          </div>
+          <br>
           <h2 class="subtitle has-text-centered">
-        Generalization to unseen interactions. As representative examples, we consider two unseen interaction scenarios: lifting a pushed rope and rotating a lifted sloth. The results show that
-PhysWorld generates physically plausible predictions, while PhysTwin suffers from artifacts such as
-fracture-like rope distortions and unnatural foot folding.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
+            Figure A: Visual results of action-conditioned future prediction. 
+            Drag the slider to compare predictions with and without visualization of point trajectories predicted by GNNs. (The consistent coloring of points and trajectories is intended solely for enhanced visualization and carries no underlying significance. The lower-opacity segments represent the ground truth motion of the object.)
+          </h2>
+        </div>
+      </div>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Model-Based Planning</h2>
-          <img src="static/figures/MPC2.png" alt="Research Teaser Image" style="width:100%; object-fit:contain;">
+      <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-video1">
+              <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/future_prediction/double_lift_sloth_fixed.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video2">
+              <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/future_prediction/double_lift_zebra_fixed.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video3">
+              <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/future_prediction/single_lift_rope_fixed.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video4">
+              <video poster="" id="video4" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/future_prediction/single_push_rope_fixed.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
           <h2 class="subtitle has-text-centered">
-        Examples of model-based planning. With MPPI control, the rope and the zebra doll are transferred from the initial configurations to the target ones.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
+            Figure B: Visual results of action-conditioned future prediction compared with PhysTwin. Our method’s predicted positions
+            show closer alignment with ground truth compared to PhysTwin.
+          </h2>
+          <!-- <h2 class="subtitle has-text-centered">
+            Quantitative results on action-conditioned future prediction and inference speed (FPS). Best
+            metric values are bolded, while second-best ones are underlined. The metrics demonstrate both the accuracy
+            and effectiveness of PhysWorld in both predicting motion and generating realistic images.
+          </h2> -->
+        </div>
+      </div>
+    </section>
+    <!-- End Video Comparison Slider -->
 
+    <!-- Comparison carousel -->
+    <!-- <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Comparison with PhysTwin</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-video1">
+              <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/future_prediction/double_lift_sloth_fixed.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video2">
+              <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/future_prediction/double_lift_zebra_fixed.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video3">
+              <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/future_prediction/single_lift_rope_fixed.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video4">
+              <video poster="" id="video4" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/future_prediction/single_push_rope_fixed.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            More visual results of action-conditioned future prediction compared with PhysTwin. Our method’s predicted positions
+            show closer alignment with ground truth compared to PhysTwin.
+          </h2>
+          <img src="static/figures/big_table.png" alt="Research Teaser Image" style="width:100%; max-height:500px; object-fit:contain;">
+          <!-- <h2 class="subtitle has-text-centered">
+            Quantitative results on action-conditioned future prediction and inference speed (FPS). Best
+            metric values are bolded, while second-best ones are underlined. The metrics demonstrate both the accuracy
+            and effectiveness of PhysWorld in both predicting motion and generating realistic images.
+          </h2> -->
+        </div>
+      </div>
+    </section> -->
+    <!-- End comparison carousel -->
 
+    <!-- Unseen interaction -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Unseen Interaction</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-video1">
+              <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/unseen_interaction/rope_unseen_compose_fixed.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video2">
+              <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/unseen_interaction/sloth_unseen_compose_fixed.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Figure C: Generalization to unseen interactions. As representative examples, we consider two unseen interaction scenarios: lifting a pushed rope and rotating a lifted sloth. The results show that
+            PhysWorld generates physically plausible predictions, while PhysTwin suffers from artifacts such as
+            fracture-like rope distortions and unnatural foot folding.
+          </h2>
+          <br>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-video1">
+              <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/unseen_interaction/real_rope_overlay.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video2">
+              <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/unseen_interaction/real_cloth_overlay.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Figure D: Qualitative comparison with PhysTwin on unseen interactions with a rope and a cloth recorded by a real robot (shaded regions indicate the ground truths).
+          </h2>
+        </div>
+      </div>
+    </section>
+    <!-- End unseen interaction -->
 
+    <!-- Model-Based Planning on a Physical Robot -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Model-Based Planning on a Physical Robot</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-video1">
+              <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/robot_planning/rope.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video2">
+              <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/robot_planning/sloth.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video3">
+              <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
+                <source src="static/videos/robot_planning/cloth.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Figure G: Qualitative results of Real-robot model-based planning. With PhysWorld GNN models and MPPI control method, the rope, the toy sloth and the cloth are transferred from the initial configurations to the target ones (shaded regions indicate the target configurations).
+          </h2>
+        </div>
+      </div>
+    </section>
+    <!-- End Model-Based Planning -->
+
+  </main>
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
@@ -469,11 +534,169 @@ fracture-like rope distortions and unnatural foot folding.
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- Statcounter tracking code removed -->
 
-    <!-- End of Statcounter Code -->
+  <!-- Video Comparison Slider Script -->
+  <script>
+  (function() {
+    const container = document.getElementById('videoCompare');
+    const videoLeft = document.getElementById('videoLeft');
+    const videoRight = document.getElementById('videoRight');
+    const sliderLine = document.getElementById('sliderLine');
+    const sliderHandle = document.getElementById('sliderHandle');
+    const sceneSelector = document.getElementById('sceneSelector');
 
-  </body>
-  </html>
+    const BASE_LEFT = 'static/videos/pred_vis/without_points/';
+    const BASE_RIGHT = 'static/videos/pred_vis/with_points/';
+
+    let position = 0.5; // 0~1
+    let isDragging = false;
+    let syncEnabled = true;
+
+    // --- Slider position update ---
+    function setPosition(pos) {
+      position = Math.max(0.01, Math.min(0.99, pos));
+      const pct = (position * 100) + '%';
+      videoLeft.style.clipPath = 'inset(0 ' + (100 - position * 100) + '% 0 0)';
+      sliderLine.style.left = pct;
+      sliderHandle.style.left = pct;
+
+      // Hide labels when slider is near edges
+      const labelLeft = container.querySelector('.compare-label-left');
+      const labelRight = container.querySelector('.compare-label-right');
+      if (labelLeft) labelLeft.style.opacity = position > 0.15 ? '1' : '0';
+      if (labelRight) labelRight.style.opacity = position < 0.85 ? '1' : '0';
+    }
+
+    // --- Mouse events ---
+    function getPosFromEvent(e) {
+      const rect = container.getBoundingClientRect();
+      return (e.clientX - rect.left) / rect.width;
+    }
+
+    container.addEventListener('mousedown', function(e) {
+      isDragging = true;
+      setPosition(getPosFromEvent(e));
+      e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', function(e) {
+      if (!isDragging) return;
+      setPosition(getPosFromEvent(e));
+      e.preventDefault();
+    });
+
+    document.addEventListener('mouseup', function() {
+      isDragging = false;
+    });
+
+    // --- Touch events ---
+    function getPosFromTouch(e) {
+      const rect = container.getBoundingClientRect();
+      return (e.touches[0].clientX - rect.left) / rect.width;
+    }
+
+    container.addEventListener('touchstart', function(e) {
+      isDragging = true;
+      setPosition(getPosFromTouch(e));
+      e.preventDefault();
+    }, { passive: false });
+
+    document.addEventListener('touchmove', function(e) {
+      if (!isDragging) return;
+      setPosition(getPosFromTouch(e));
+      e.preventDefault();
+    }, { passive: false });
+
+    document.addEventListener('touchend', function() {
+      isDragging = false;
+    });
+
+    // --- Video synchronization ---
+    function syncVideos(source, target) {
+      if (!syncEnabled) return;
+      syncEnabled = false;
+      const diff = Math.abs(source.currentTime - target.currentTime);
+      if (diff > 0.05) {
+        target.currentTime = source.currentTime;
+      }
+      if (source.paused && !target.paused) {
+        target.pause();
+      } else if (!source.paused && target.paused) {
+        target.play().catch(function(){});
+      }
+      syncEnabled = true;
+    }
+
+    // Keep right video synced to left (master)
+    videoLeft.addEventListener('timeupdate', function() {
+      syncVideos(videoLeft, videoRight);
+    });
+    videoLeft.addEventListener('play', function() {
+      if (videoRight.paused) videoRight.play().catch(function(){});
+    });
+    videoLeft.addEventListener('pause', function() {
+      videoRight.pause();
+    });
+    videoLeft.addEventListener('seeked', function() {
+      videoRight.currentTime = videoLeft.currentTime;
+    });
+
+    // Periodic sync via rAF for tighter sync
+    function syncLoop() {
+      if (!videoLeft.paused && !videoRight.paused) {
+        const diff = Math.abs(videoLeft.currentTime - videoRight.currentTime);
+        if (diff > 0.03) {
+          videoRight.currentTime = videoLeft.currentTime;
+        }
+      }
+      requestAnimationFrame(syncLoop);
+    }
+    requestAnimationFrame(syncLoop);
+
+    // --- Scene switching ---
+    sceneSelector.addEventListener('click', function(e) {
+      const btn = e.target.closest('.scene-btn');
+      if (!btn) return;
+
+      // Update active state
+      sceneSelector.querySelectorAll('.scene-btn').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+
+      const scene = btn.dataset.scene;
+      const wasPlaying = !videoLeft.paused;
+      const currentTime = videoLeft.currentTime;
+
+      videoLeft.src = BASE_LEFT + scene + '.mp4';
+      videoRight.src = BASE_RIGHT + scene + '.mp4';
+
+      // Restore playback state after videos are ready
+      videoLeft.addEventListener('loadeddata', function onLoaded() {
+        videoLeft.removeEventListener('loadeddata', onLoaded);
+        videoLeft.currentTime = currentTime;
+        videoRight.currentTime = currentTime;
+        if (wasPlaying) {
+          Promise.all([videoLeft.play(), videoRight.play()]).catch(function(){});
+        }
+      });
+    });
+
+    // --- Initial load & autoplay ---
+    videoLeft.addEventListener('loadeddata', function onInit() {
+      videoLeft.removeEventListener('loadeddata', onInit);
+      setPosition(0.5);
+      Promise.all([
+        videoLeft.play(),
+        videoRight.play()
+      ]).catch(function() {
+        // Autoplay may be blocked; user can click to play
+      });
+    });
+
+  })();
+  </script>
+
+</body>
+</html>
